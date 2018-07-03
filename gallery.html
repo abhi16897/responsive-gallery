@@ -1,0 +1,144 @@
+ <html>
+<head>
+	<title>Gallery</title>	
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="jquery-3.2.1.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width, intial-scale=1">
+	<meta charset="utf-8">
+	<style type="text/css">
+	.thumbnail{
+	width:100%;
+	overflow:hidden;
+	}
+	img{
+	display:block;
+	}
+	#top img:hover{
+	transform:scale(1.3);
+	}
+	</style>
+</head>
+<body>
+     <div class="container">
+	<h2 style="text-align:center;">Beautiful Images</h3><br>
+	Search:<input type="text" id="txt" name="hii"><button id="but" value="but1" onclick="submit()">submit</button><br>
+	<img height="540px" width="1200px" src="img/1.jpg" id="main" style="margin-top:40px" name="hello">
+	<h2 style="text-align:center;margin-top:100px;margin-bottom:20px;">Gallery</h2>
+		<div class="row" id="top">
+			<div class="col-md-4">
+				<div class="thumbnail">
+				<a href="img/1.jpg" class="fancybox" rel="group">
+					<img src="img/1.jpg" id="house">
+					</a>
+				</div>
+				<p> House</p>
+			</div>
+			<div class="col-md-4">
+				<div class="thumbnail">
+					<a href="img/2.jpg" class="fancybox" rel="group">
+					<img src="img/2.jpg" id="house">
+					</a>
+				</div>
+				<p class="caption">Chess</p>
+			</div>
+			<div class="col-md-4">
+				<div class="thumbnail">
+					<a href="img/3.jpg" class="fancybox" rel="group">
+					<img src="img/3.jpg" id="music">
+					</a>
+				</div>
+				<p class="caption">Music</p>
+			</div>
+			<div class="col-md-4">
+				<div class="thumbnail" id="magic balls">
+					<a href="img/4.jpg" class="fancybox" rel="group">
+					<img src="img/4.jpg">
+					</a>
+				</div>
+				<p class="caption">Magic Balls</p>
+			</div>
+			<div class="col-md-4">
+				<div class="thumbnail">
+					<a href="img/5.jpg" class="fancybox" rel="group">
+					<img src="img/5.jpg" id="street">
+					</a>
+				</div>
+				<p class="caption">Street</p>
+			</div>
+			<div class="col-md-4">
+				<div class="thumbnail">
+					<a href="img/6.jpg" class="fancybox" rel="group">
+					<img src="img/6.jpg" id="boat">
+					</a>
+				</div>
+				<p class="caption">Boat</p>
+			</div>
+			<div class="col-md-4">
+				<div class="thumbnail">
+					<a href="img/7.jpg" class="fancybox" rel="group">
+					<img src="img/7.jpg" id="magic hands">
+					</a>
+				</div>
+				<p class="caption">Magical hands</p>
+			</div>
+			<div class="col-md-4">
+				<div class="thumbnail">
+					<a href="img/8.jpg" class="fancybox" rel="group">
+					<img src="img/8.jpg" id="magic ring">
+					</a>
+				</div>
+				<p class="caption">Magical ring</p>
+			</div>
+			<div class="col-md-4">
+				<div class="thumbnail">
+					<a href="img/9.jpg" class="fancybox" rel="group">
+					<img src="img/9.jpg" id="space">
+					</a>
+				</div>
+				<p class="caption">Space</p>
+			</div>
+		</div>
+</div>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="lib/jquery.mousewheel-3.0.6.pack.js"></script>
+	<link rel="stylesheet" href="source/jquery.fancybox.css?v=2.1.7" type="text/css" media="screen" />
+	<script type="text/javascript" src="source/jquery.fancybox.pack.js?v=2.1.7"></script>
+    <script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+	</script>
+    <script type="text/javascript">
+	  $('#but').click(function() {
+	  var term = $('#txt').val();
+	  if(term=="house"){
+	  $('#main').attr("src","img/1.jpg");
+	  }else if(term=="chess"){
+	  $('#main').attr("src","img/2.jpg");
+	  }else if(term=="music"){
+	  $('#main').attr("src","img/3.jpg");
+	  }else if(term=="magic balls"){
+	  $('#main').attr("src","img/4.jpg");
+	  }else if(term=="street"){
+	  $('#main').attr("src","img/5.jpg");
+	  }else if(term=="boat"){
+	  $('#main').attr("src","img/6.jpg");
+	  }else if(term=="magical hands"){
+	  $('#main').attr("src","img/7.jpg");
+	  }else if(term=="magical ring"){
+	  $('#main').attr("src","img/8.jpg");
+	  }else if(term=="space"){
+	  $('#main').attr("src","img/9.jpg");
+	  }else{
+	  alert("There no such type of image in gallery or enter with lower case");}
+    });
+
+	</script>
+
+</body>
+</html>
